@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+  </head>
+  <body>
+    <a-scene gui-env>
+      <a-assets>
+        <img id="linkedInIcon"
+          src="https://raw.githubusercontent.com//NikkiE-Holberton/WebAR_BusinessCard/main/assets/Linkedin_logo.png"/>
+        </a-assets>
+      <a-assets>
+        <img id="instaIcon"
+          src="https://raw.githubusercontent.com/NikkiE-Holberton/WebAR_BusinessCard/main/assets/Insta_logo.png"/>
+      </a-assets>
+      <a-assets>
+        <img id="fbIcon"
+          src="https://raw.githubusercontent.com/NikkiE-Holberton/WebAR_BusinessCard/main/assets/Facebook_logo.png"/>
+      </a-assets>
+
+      <a-plane position="0 2 -5" rotation="0 0 0" width="8" height="6"
+        src="https://raw.githubusercontent.com/NikkiE-Holberton/WebAR_BusinessCard/main/assets/card_background.jpg">
+      </a-plane>
+      <a-camera>
+        <a-gui-cursor id="cursor" raycaster="objects: [gui-interactable]" fuse="false" color="#FF9D00" position="0 0 -1"
+        ></a-gui-cursor>
+      </a-camera>
+      <a-entity
+        geometry="primitive: plane"
+        gui-interactable
+        position="-2 2.5 -3.5"
+        material="src: #linkedInIcon; alphaTest: 1"
+        onclick="location.href='https://www.linkedin.com/in/nikki-edmonds-developer/'">
+      </a-entity>
+      <a-entity
+        geometry="primitive: plane"
+        gui-interactable
+        position="0 3.5 -3.5"
+        material="src: #instaIcon; alphaTest: 1"
+        onclick="location.href='https://www.instagram.com/its_tech_world_4_me/'">
+      </a-entity>
+      <a-entity
+        geometry="primitive: plane"
+        gui-interactable
+        position="2 2.5 -3.5"
+        material="src: #fbIcon; alphaTest: 1"
+        onclick="location.href='https://www.facebook.com/profile.php?id=100077163728225'">
+      </a-entity>
+      <a-text value="Nikki Edmonds
+                     Game Developer"
+              anchor= "center"
+              baseline="bottom"
+              position="1.75 .5 -3.5"
+              color="black"></a-text>
+      
+    </a-scene>
+  </body>
+</html>
